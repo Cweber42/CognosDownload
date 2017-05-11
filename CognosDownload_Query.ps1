@@ -3,7 +3,7 @@
 # Change the below variables
 # Use lines 5 to create and save your password in a secure XML file)
 # Read-Host "Enter Password" -AsSecureString |  ConvertFrom-SecureString | Out-File "C:\scripts\apscnpw.txt"
-
+# Run line 5 each time you update your School Password to re-export the updated file
 
 
 $username = "0000name" #APSCN/SSO username
