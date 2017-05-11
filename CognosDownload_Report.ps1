@@ -1,8 +1,13 @@
 ﻿# Setup a report with specific name (MyReportName) to run scheduled to save with which format you want then schedule this script to download it.
 # Run from command line or batch script: powershell.exe -executionpolicy bypass -file C:\ImportFiles\Scripts\CognosDownload.ps1 MyReportName
 # Change the below variables
+# Use lines 5 to create and save your password in a secure XML file)
+# Read-Host "Enter Password" -AsSecureString |  ConvertFrom-SecureString | Out-File "C:\scripts\apscnpw.txt"
+# Run line 5 each time you update your School Password to re-export the updated file
+
+
 $username = "0000name" #APSCN/SSO username
-$password = "Yourpasswordhereincleartextohnoes!" #APSCN/SSO password
+$password = Get-Content "C:\scripts\apscnpw.txt" | ConvertTo-SecureString #Should Match the export location from line 5
 $userdomain = "APSCN"
 # dsnname is the database name for your district
 # To obtain this you need to log in to the eSchool Cognos site using and view the source code of the overall frameset.
