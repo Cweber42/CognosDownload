@@ -1,10 +1,9 @@
 ﻿# Setup a report with specific name (MyReportName) to run scheduled to save with which format you want then schedule this script to download it.
 # Run from command line or batch script: powershell.exe -executionpolicy bypass -file C:\ImportFiles\Scripts\CognosDownload.ps1 MyReportName
 # Change the below variables
-# Use lines 5 to create and save your password in a secure XML file)
-# Read-Host "Enter Password" -AsSecureString |  ConvertFrom-SecureString | Out-File "C:\scripts\apscnpw.txt"
+# Use lines 5 to create and save your password in a obfuscated text file.!!!!! Line 5 must be ran on the machine and USER context that runs the script!!!!
+# Read-Host "Enter Password" -AsSecureString |  ConvertFrom-SecureString | Out-File "C:\scripts\apscnpw.txt" 
 # Run line 5 each time you update your School Password to re-export the updated file
-
 
 $username = "0000name" #APSCN/SSO username
 $password = Get-Content "C:\scripts\apscnpw.txt" | ConvertTo-SecureString #Should Match the export location from line 5
