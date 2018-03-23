@@ -1,4 +1,8 @@
 # CognosDownload
-Use the Reports download to download Cognos reports created with Report Studio (generally these will be provided to you by state employees)
+Example 1: 
+CognsDL script location\ Name of Report\ Where to save report \ Report or Query 
+C:\scripts\cognosdl-args.ps1 Studentinfo c:\scripts\activedirectory report
 
-Use the Query download to download Cognos reports created with Query Studio (generally created by you or someone in your district)
+Example 2:
+CognsDL script location\ Name of Report\ Where to save report \ Report or Query \ Nest folder
+C:\scripts\cognosdl-args.ps1 Classes c:\scripts\Googleclass Query Googleclassroom
